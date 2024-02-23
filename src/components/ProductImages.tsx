@@ -46,14 +46,6 @@ const ProductImageGallery: React.FC<ProductProps> = ({ images, selectedColorImag
         <div className="flex flex-col items-center">
             <div className="relative" key={selectedImageIndex || 'default'}>
                 {/* Image principale - Affiche l'image par défaut ou l'image sélectionnée */}
-                {/* {selectedColorImage ? (
-                    <img
-                        src={displayImage}
-                        alt="Selected product"
-                        className="object-scale-down w-[844px]  h-[469.5px]"
-                    />) : (
-                    <img src={selectedColorImage} className="object-scale-down w-[844px] h-[469.5px]" />
-                )} */}
                 {selectedColorImage ? (
                     <motion.img
                         initial="hidden"

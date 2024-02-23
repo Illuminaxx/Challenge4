@@ -39,7 +39,7 @@ const RatingComponent = () => {
                             <img
                                 src={getStarImage(ratingValue)}
                                 alt={`star ${ratingValue}`}
-                                className="w-4 h-4 mr-1"
+                                className="w-[14px] h-[14px] mr-1"
                             />
                         </button>
                     );
