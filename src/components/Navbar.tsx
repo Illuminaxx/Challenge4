@@ -30,23 +30,23 @@ const Navbar = ({ cartCount }: NavbarProps) => {
                     </a>
 
                     <div className="flex space-x-4">
-                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-verdigris">SHOP</a>
-                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-verdigris">COLLECTIVE</a>
-                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-verdigris">DESIGNERS</a>
-                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-verdigris">ABOUT US</a>
-                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-verdigris">CONTACT</a>
+                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-veridigris transition-colors duration-150">SHOP</a>
+                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-veridigris transition-colors duration-150">COLLECTIVE</a>
+                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-veridigris transition-colors duration-150">DESIGNERS</a>
+                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-veridigris transition-colors duration-150">ABOUT US</a>
+                        <a href="#" className="text-gray-600 px-3 py-2 rounded-md  text-small leading-base font-poppins font-semibold hover:text-veridigris transition-colors duration-150">CONTACT</a>
                     </div>
 
 
                     <div className="flex justify-between items-center w-44">
                         <div className="flex space-x-10">
-                            <button className="text-gray-600 hover:text-verdigris">
+                            <button className="text-gray-600">
                                 {/* Icone de menu */}
                                 <img src={menu} />
                             </button>
-                            <button className="text-gray-600 hover:text-verdigris mr-7">
+                            <button className="text-gray-600 mr-7">
                                 {/* Icone de recherche */}
-                                <img src={search} />
+                                <img src={search}  />
                             </button>
                         </div>
 
