@@ -19,6 +19,19 @@ const ProductImageGallery: React.FC<ProductProps> = ({ images, selectedColorImag
         tap: { scale: 0.9 }
     };
 
+    const imageVariants = {
+        hidden: { scale: 0.85, opacity: 0 },
+        visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 260,
+                damping: 20
+            }
+        }
+    };
+
     const goToPreviousImage = () => {
         setSelectedImageIndex((prevIndex) => prevIndex !== null ? (prevIndex - 1 + images.length) % images.length : null);
     };
@@ -28,18 +41,39 @@ const ProductImageGallery: React.FC<ProductProps> = ({ images, selectedColorImag
     };
 
     const displayImage = selectedImageIndex !== null ? images[selectedImageIndex] : defaultImg || selectedColorImage;
-    
+
     return (
         <div className="flex flex-col items-center">
-            <div className="relative">
+            <div className="relative" key={selectedImageIndex || 'default'}>
                 {/* Image principale - Affiche l'image par défaut ou l'image sélectionnée */}
-                {selectedColorImage ? (
+                {/* {selectedColorImage ? (
                     <img
                         src={displayImage}
                         alt="Selected product"
                         className="object-scale-down w-[844px]  h-[469.5px]"
                     />) : (
                     <img src={selectedColorImage} className="object-scale-down w-[844px] h-[469.5px]" />
+                )} */}
+                {selectedColorImage ? (
+                    <motion.img
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={imageVariants}
+                        src={displayImage}
+                        alt="Selected product"
+                        className="object-scale-down w-[844px] h-[469.5px]"
+                    />
+                ) : (
+                    <motion.img
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={imageVariants}
+                        src={selectedColorImage}
+                        alt="Selected product"
+                        className="object-scale-down w-[844px] h-[469.5px]"
+                    />
                 )}
                 {/* Flèches de navigation et compteur d'images */}
                 {images.length > 0 && (
